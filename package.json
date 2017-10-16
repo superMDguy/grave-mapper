@@ -11,12 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "es6-promisify": "^5.0.0",
+    "fs-js-lite": "^2.5.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
     "requests": "^0.2.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "7.",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "html-loader": "^0.5.1",
