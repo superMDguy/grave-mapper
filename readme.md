@@ -14,8 +14,8 @@ API key for the Google Maps Javscript API. You can get one [here](https://develo
 API key for Family Search API. You can get one [here](https://www.familysearch.org/developers/).
 
 ### fsEnvironment
-Which Family Search environment to use. It can *production*, *beta*, or *integration*.
+Which Family Search environment to use. It can be either *production*, *beta*, or *integration*.
 
 
 ## Run it
-First, run `npm install`, and then `npm run fetchData` to download all the ancestor's data from family search. Then, run `npm start` to start the web app, and go to a browser. It should automatically open the app in a new tab. 
+First, run `npm install`. Then, run `npm start` to start the web app, and go to a browser. It should automatically open the app in a new tab. If anything goes wrong, feel free to open an issue. 
