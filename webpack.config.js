@@ -33,7 +33,12 @@ module.exports = {
                         minimize: true
                     }
                 }],
-            }]
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
