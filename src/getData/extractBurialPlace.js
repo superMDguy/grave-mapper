@@ -45,7 +45,6 @@ const promises = withBurial.map(id => {
     .catch(console.error);
 });
 Promise.all(promises).then(details => {
-  fs.writeFileSync('simplifiedPersonDetails.json', JSON.stringify(details));
-  console.log('Wrote file');
+  fs.writeFileSync('peopleWithBurialInfo.json', JSON.stringify(details));
+  console.log('Dumped data to file.');
 });
-// console.log(details.filter(detail => detail.burialPlace.match(/minnesota/i)))

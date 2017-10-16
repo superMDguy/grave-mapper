@@ -1,13 +1,13 @@
 document.body.innerHTML = require('./map.html');
 const loadGoogleMapsAPI = require('load-google-maps-api');
-const people = require('./getData/simplifiedPersonDetails.json');
+const people = require('./getData/peopleWithBurialInfo.json');
 const apiKey = require('../config.js').mapsAPIKey;
 
 loadGoogleMapsAPI({
   key: apiKey
 }).then(googleMaps => {
   const map = new googleMaps.Map(document.getElementById('map'), {
-    zoom: 4,
+    zoom: 3,
     center: { lat: 0, lng: 0 }
   });
 
@@ -20,13 +20,11 @@ loadGoogleMapsAPI({
     const personInfo = `<h1>${person.name}</h1>
                             <h2><em>${person.lifespan}</em></h2>
                             <div>
-                                <a href="https://www.familysearch.org/tree/person/${person.id}/details">Family Search Link</a>
+                                <a href="https://www.familysearch.org/tree/person/${person.id}/details">
+                                  Family Search Link
+                                 </a>
                             </div>`;
-    const infowindow = new googleMaps.InfoWindow({
-      content: personInfo
-    });
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
+    const infowindow = new googleMaps.InfoWindow({ content: personInfo });
+    marker.addListener('click', () => infowindow.open(map, marker));
   });
 });

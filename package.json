@@ -4,9 +4,9 @@
   "description": "Get all details about family tree",
   "main": "getDetails.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --hot --open --inline",
-    "build": "rm -rf dist && webpack -p"
+    "build": "rm -rf dist && webpack -p",
+    "fetchData": "node ./src/getData/getDetails.js && node ./src/getData/extractBurialPlace.js"
   },
   "author": "",
   "license": "ISC",
