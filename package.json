@@ -4,7 +4,7 @@
   "description": "Map the locations of burial places of ancestors, using the family search API",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --open --inline",
+    "start": "webpack-dev-server",
     "build": "rm -rf dist && webpack -p",
     "prettier": "prettier --no-semi --single-quote --trailing-comma all --write ./src/*.js"
   },

@@ -1,17 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: './src/main.js',
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[hash].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        contentBase: './dist',
-        historyApiFallback: {
-            index: 'index.html'
-        }
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -42,7 +40,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Family Burial Mapper'
+            title: 'Grave Mapper'
         }),
+        new UglifyJSPlugin({
+            sourceMap: true
+        })
     ],
 };

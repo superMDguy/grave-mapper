@@ -18,7 +18,6 @@ export function authenticate() {
   if (window.location.pathname === '/') {
     fs.oauthRedirect()
   } else if (window.location.pathname === '/authenticated') {
-    console.log(fs)
     fs.oauthResponse()
     window.location.href = '/map'
   }
